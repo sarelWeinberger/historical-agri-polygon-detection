@@ -1,0 +1,199 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "clip",
+        "id": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              336,
+              336
+            ],
+            [
+              336,
+              671
+            ],
+            [
+              224,
+              672
+            ],
+            [
+              224,
+              830
+            ],
+            [
+              783,
+              830
+            ],
+            [
+              783,
+              784
+            ],
+            [
+              671,
+              783
+            ],
+            [
+              671,
+              448
+            ],
+            [
+              448,
+              448
+            ],
+            [
+              447,
+              336
+            ],
+            [
+              336,
+              336
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "clip",
+        "id": 1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1120,
+              112
+            ],
+            [
+              1120,
+              167
+            ],
+            [
+              1212,
+              167
+            ],
+            [
+              1212,
+              112
+            ],
+            [
+              1120,
+              112
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "clip",
+        "id": 2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              840,
+              0
+            ],
+            [
+              840,
+              111
+            ],
+            [
+              988,
+              111
+            ],
+            [
+              988,
+              0
+            ],
+            [
+              840,
+              0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "clip",
+        "id": 3
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              336,
+              0
+            ],
+            [
+              336,
+              223
+            ],
+            [
+              671,
+              223
+            ],
+            [
+              671,
+              0
+            ],
+            [
+              336,
+              0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "clip",
+        "id": 4
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              167
+            ],
+            [
+              223,
+              167
+            ],
+            [
+              223,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "owlv2",
+        "id": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              284,
+              6
+            ],
+            [
+              284,
+              1111
+            ],
+            [
+              1583,
+              1111
+            ],
+            [
+              1583,
+              6
+            ],
+            [
+              284,
+              6
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

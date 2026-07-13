@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "florence2_refseg",
+        "id": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              286,
+              28
+            ],
+            [
+              1260,
+              1062
+            ],
+            [
+              1261,
+              28
+            ],
+            [
+              1330,
+              26
+            ],
+            [
+              286,
+              28
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

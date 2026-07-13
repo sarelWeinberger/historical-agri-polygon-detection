@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "grounding_dino",
+        "id": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              704
+            ],
+            [
+              1255,
+              704
+            ],
+            [
+              1255,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

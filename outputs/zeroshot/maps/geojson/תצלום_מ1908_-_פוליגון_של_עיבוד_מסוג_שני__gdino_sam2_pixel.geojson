@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "gdino_sam2",
+        "id": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1573,
+              25
+            ],
+            [
+              284,
+              22
+            ],
+            [
+              283,
+              1104
+            ],
+            [
+              1571,
+              1106
+            ],
+            [
+              1573,
+              25
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

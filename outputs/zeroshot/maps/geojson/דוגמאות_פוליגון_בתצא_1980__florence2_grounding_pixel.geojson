@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "florence2_grounding",
+        "id": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              16,
+              10
+            ],
+            [
+              16,
+              792
+            ],
+            [
+              1197,
+              792
+            ],
+            [
+              1197,
+              10
+            ],
+            [
+              16,
+              10
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "model": "dinov2",
+        "id": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              280,
+              0
+            ],
+            [
+              280,
+              1130
+            ],
+            [
+              1599,
+              1130
+            ],
+            [
+              1599,
+              0
+            ],
+            [
+              1512,
+              0
+            ],
+            [
+              1511,
+              56
+            ],
+            [
+              1456,
+              56
+            ],
+            [
+              1455,
+              0
+            ],
+            [
+              280,
+              0
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}
