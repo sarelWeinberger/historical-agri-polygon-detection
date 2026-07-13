@@ -1,0 +1,158 @@
+{
+  "source_dir": "/home/ubuntu/ME/SOURCE",
+  "n_images": 6,
+  "images": [
+    {
+      "filename": "mm188_0567_19091969.jpg",
+      "path": "/home/ubuntu/ME/SOURCE/mm188_0567_19091969.jpg",
+      "size_bytes": 151278568,
+      "width": 33541,
+      "height": 32761,
+      "channels": 1,
+      "dtype": "uint8",
+      "sha16": "a1b86350dea07d0d",
+      "photo_date": "1969-09-19",
+      "years_in_name": [],
+      "sat_fraction": 0.0,
+      "yellow_px": 0,
+      "red_px": 0,
+      "has_white_margin": false,
+      "has_left_info_panel": false,
+      "role": "original",
+      "subtype": "orthophoto",
+      "year": 1969,
+      "notes": [
+        "full-resolution historical scan"
+      ]
+    },
+    {
+      "filename": "mosaic_mm642_7457_7459_7471_7473_01021980.jpg",
+      "path": "/home/ubuntu/ME/SOURCE/mosaic_mm642_7457_7459_7471_7473_01021980.jpg",
+      "size_bytes": 120222629,
+      "width": 25184,
+      "height": 24721,
+      "channels": 3,
+      "dtype": "uint8",
+      "sha16": "f7a8c122d404b39d",
+      "photo_date": "1980-02-01",
+      "years_in_name": [],
+      "sat_fraction": 0.0,
+      "yellow_px": 0,
+      "red_px": 0,
+      "has_white_margin": false,
+      "has_left_info_panel": false,
+      "role": "original",
+      "subtype": "orthophoto",
+      "year": 1980,
+      "notes": [
+        "full-resolution historical scan"
+      ]
+    },
+    {
+      "filename": "source1969.JPE",
+      "path": "/home/ubuntu/ME/SOURCE/source1969.JPE",
+      "size_bytes": 500709,
+      "width": 1600,
+      "height": 1131,
+      "channels": 3,
+      "dtype": "uint8",
+      "sha16": "cf66992b521ec566",
+      "photo_date": null,
+      "years_in_name": [
+        1969
+      ],
+      "sat_fraction": 0.012373452696728559,
+      "yellow_px": 8931,
+      "red_px": 1435,
+      "has_white_margin": true,
+      "has_left_info_panel": true,
+      "role": "annotated",
+      "subtype": "map_layout",
+      "year": 1969,
+      "notes": [
+        "framed ITM cartographic export; carries coordinate graticule",
+        "same-year original: mm188_0567_19091969.jpg"
+      ]
+    },
+    {
+      "filename": "source1980.JPE",
+      "path": "/home/ubuntu/ME/SOURCE/source1980.JPE",
+      "size_bytes": 434708,
+      "width": 1259,
+      "height": 707,
+      "channels": 3,
+      "dtype": "uint8",
+      "sha16": "ebcc8ada7c4651e2",
+      "photo_date": null,
+      "years_in_name": [
+        1980
+      ],
+      "sat_fraction": 0.011660317285558126,
+      "yellow_px": 1702,
+      "red_px": 2592,
+      "has_white_margin": false,
+      "has_left_info_panel": false,
+      "role": "annotated",
+      "subtype": "example_crop",
+      "year": 1980,
+      "notes": [
+        "un-framed annotated screenshot (no graticule)",
+        "same-year original: mosaic_mm642_7457_7459_7471_7473_01021980.jpg"
+      ]
+    },
+    {
+      "filename": "דוגמאות פוליגון בתצא 1980.png",
+      "path": "/home/ubuntu/ME/SOURCE/דוגמאות פוליגון בתצא 1980.png",
+      "size_bytes": 1427525,
+      "width": 1213,
+      "height": 831,
+      "channels": 4,
+      "dtype": "uint8",
+      "sha16": "4124946d4dc50f4c",
+      "photo_date": null,
+      "years_in_name": [
+        1980
+      ],
+      "sat_fraction": 0.013860077797387509,
+      "yellow_px": 1520,
+      "red_px": 7322,
+      "has_white_margin": true,
+      "has_left_info_panel": false,
+      "role": "annotated",
+      "subtype": "example_crop",
+      "year": 1980,
+      "notes": [
+        "un-framed annotated screenshot (no graticule)",
+        "same-year original: mosaic_mm642_7457_7459_7471_7473_01021980.jpg"
+      ]
+    },
+    {
+      "filename": "תצלום מ1908 - פוליגון של עיבוד מסוג שני.jpeg",
+      "path": "/home/ubuntu/ME/SOURCE/תצלום מ1908 - פוליגון של עיבוד מסוג שני.jpeg",
+      "size_bytes": 530049,
+      "width": 1600,
+      "height": 1131,
+      "channels": 3,
+      "dtype": "uint8",
+      "sha16": "0db6cfefef1c3656",
+      "photo_date": "1980-02-01",
+      "years_in_name": [
+        1908
+      ],
+      "sat_fraction": 0.012821618037135279,
+      "yellow_px": 9482,
+      "red_px": 1435,
+      "has_white_margin": true,
+      "has_left_info_panel": true,
+      "role": "annotated",
+      "subtype": "map_layout",
+      "year": 1980,
+      "notes": [
+        "framed ITM cartographic export; carries coordinate graticule",
+        "implausible year 1908 parsed from name; likely a typo",
+        "OVERRIDE: filename token '1908' is a typo; sheet prints photo date 01.02.1980",
+        "same-year original: mosaic_mm642_7457_7459_7471_7473_01021980.jpg"
+      ]
+    }
+  ]
+}

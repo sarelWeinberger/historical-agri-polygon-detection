@@ -1,0 +1,93 @@
+<!doctype html><html><head><meta charset="utf-8">
+    <title>Milestone 1 — Annotation Viewer</title>
+    <style>
+      body{font-family:system-ui,Arial,sans-serif;margin:0;background:#111;color:#eee}
+      header{padding:18px 24px;background:#1b1b1b;border-bottom:1px solid #333}
+      h1{margin:0 0 6px} .sub{color:#9ab}
+      .card{margin:20px 24px;padding:16px;background:#181818;border:1px solid #2a2a2a;border-radius:8px}
+      h2{margin:0 0 8px;font-size:16px;word-break:break-all}
+      .meta .tag,.prov,.rev{display:inline-block;padding:2px 8px;margin:2px;border-radius:10px;font-size:12px}
+      .tag{background:#243;color:#adf} .prov{background:#530;color:#fda}
+      .rev{background:#600;color:#fbb}
+      .geo{color:#8cf;font-size:13px;margin:6px 0}
+      .panels{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:10px 0}
+      figure{margin:0} img{width:100%;border:1px solid #333;background:#000}
+      figcaption{font-size:12px;color:#9ab;text-align:center;padding:4px}
+      .missing{height:120px;display:flex;align-items:center;justify-content:center;color:#666;border:1px dashed #444}
+      table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+      th,td{border:1px solid #2c2c2c;padding:4px 8px;text-align:left}
+      .c-yellow{color:#ee0} .c-red{color:#f66} .c-black{color:#9cf}
+      @media(max-width:900px){.panels{grid-template-columns:repeat(2,1fr)}}
+    </style></head><body>
+    <header><h1>Milestone 1 — Annotation Extraction Viewer</h1>
+      <div class="sub">Agricultural polygon detection from historical aerial imagery &middot;
+      totals: yellow 4 / red 4 / black 4
+      &middot; cultivated polygons 8 &middot; hard-negatives 4</div>
+      <div class="sub">Legend: yellow &amp; red &rarr; cultivated_area &middot; black &rarr; hard_negative (always human-review)</div>
+    </header>
+    
+        <section class="card">
+          <h2>source1969.JPE</h2>
+          <div class="meta">
+            <span class="tag">annotated/map_layout</span>
+            <span class="tag">year 1969</span>
+            <span class="tag">yellow 1</span>
+            <span class="tag">red 0</span>
+            <span class="tag">black 0</span>
+          </div>
+          <div class='geo'>ITM/EPSG:2039 &middot; RMSE 0.0474 m &middot; 0.13132 m/px &middot; 12 GCPs <span class='prov'>provisional</span></div>
+          <div class="panels"><figure><a href='viewer_sources/source1969_src.png' target='_blank'><img src='viewer_sources/source1969_src.png'></a><figcaption>Source (annotation ink)</figcaption></figure><figure><a href='masks/source1969_mask_class_preview.png' target='_blank'><img src='masks/source1969_mask_class_preview.png'></a><figcaption>Extracted class mask</figcaption></figure><figure><a href='masks/source1969_mask_cultivated.png' target='_blank'><img src='masks/source1969_mask_cultivated.png'></a><figcaption>Cultivated mask (binary)</figcaption></figure><figure><a href='overlays/source1969_overlay.png' target='_blank'><img src='overlays/source1969_overlay.png'></a><figcaption>Extraction overlay</figcaption></figure></div>
+          <table><thead><tr><th>colour</th><th>class</th><th>area px</th>
+            <th>compact</th><th>closed</th><th>verts</th><th>flag</th></tr></thead>
+            <tbody><tr><td class='c-yellow'>yellow</td><td>cultivated_area</td><td>364722</td><td>0.337</td><td>True</td><td>33</td><td></td></tr></tbody></table>
+          <details><summary>notes</summary><ul><li>framed ITM cartographic export; carries coordinate graticule</li><li>same-year original: mm188_0567_19091969.jpg</li></ul></details>
+        </section>
+        <section class="card">
+          <h2>source1980.JPE</h2>
+          <div class="meta">
+            <span class="tag">annotated/example_crop</span>
+            <span class="tag">year 1980</span>
+            <span class="tag">yellow 1</span>
+            <span class="tag">red 2</span>
+            <span class="tag">black 2</span>
+          </div>
+          
+          <div class="panels"><figure><a href='viewer_sources/source1980_src.png' target='_blank'><img src='viewer_sources/source1980_src.png'></a><figcaption>Source (annotation ink)</figcaption></figure><figure><a href='masks/source1980_mask_class_preview.png' target='_blank'><img src='masks/source1980_mask_class_preview.png'></a><figcaption>Extracted class mask</figcaption></figure><figure><a href='masks/source1980_mask_cultivated.png' target='_blank'><img src='masks/source1980_mask_cultivated.png'></a><figcaption>Cultivated mask (binary)</figcaption></figure><figure><a href='overlays/source1980_overlay.png' target='_blank'><img src='overlays/source1980_overlay.png'></a><figcaption>Extraction overlay</figcaption></figure></div>
+          <table><thead><tr><th>colour</th><th>class</th><th>area px</th>
+            <th>compact</th><th>closed</th><th>verts</th><th>flag</th></tr></thead>
+            <tbody><tr><td class='c-yellow'>yellow</td><td>cultivated_area</td><td>15034</td><td>0.378</td><td>True</td><td>36</td><td></td></tr><tr><td class='c-red'>red</td><td>cultivated_area</td><td>82314</td><td>0.77</td><td>True</td><td>14</td><td></td></tr><tr><td class='c-red'>red</td><td>cultivated_area</td><td>55688</td><td>0.652</td><td>True</td><td>20</td><td></td></tr><tr><td class='c-black'>black</td><td>hard_negative</td><td>5990</td><td>0.839</td><td>True</td><td>20</td><td> <span class="rev">REVIEW</span></td></tr><tr><td class='c-black'>black</td><td>hard_negative</td><td>16623</td><td>0.659</td><td>True</td><td>14</td><td> <span class="rev">REVIEW</span></td></tr></tbody></table>
+          <details><summary>notes</summary><ul><li>un-framed annotated screenshot (no graticule)</li><li>same-year original: mosaic_mm642_7457_7459_7471_7473_01021980.jpg</li></ul></details>
+        </section>
+        <section class="card">
+          <h2>דוגמאות פוליגון בתצא 1980.png</h2>
+          <div class="meta">
+            <span class="tag">annotated/example_crop</span>
+            <span class="tag">year 1980</span>
+            <span class="tag">yellow 1</span>
+            <span class="tag">red 2</span>
+            <span class="tag">black 2</span>
+          </div>
+          
+          <div class="panels"><figure><a href='viewer_sources/%D7%93%D7%95%D7%92%D7%9E%D7%90%D7%95%D7%AA_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%91%D7%AA%D7%A6%D7%90_1980_src.png' target='_blank'><img src='viewer_sources/%D7%93%D7%95%D7%92%D7%9E%D7%90%D7%95%D7%AA_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%91%D7%AA%D7%A6%D7%90_1980_src.png'></a><figcaption>Source (annotation ink)</figcaption></figure><figure><a href='masks/%D7%93%D7%95%D7%92%D7%9E%D7%90%D7%95%D7%AA_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%91%D7%AA%D7%A6%D7%90_1980_mask_class_preview.png' target='_blank'><img src='masks/%D7%93%D7%95%D7%92%D7%9E%D7%90%D7%95%D7%AA_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%91%D7%AA%D7%A6%D7%90_1980_mask_class_preview.png'></a><figcaption>Extracted class mask</figcaption></figure><figure><a href='masks/%D7%93%D7%95%D7%92%D7%9E%D7%90%D7%95%D7%AA_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%91%D7%AA%D7%A6%D7%90_1980_mask_cultivated.png' target='_blank'><img src='masks/%D7%93%D7%95%D7%92%D7%9E%D7%90%D7%95%D7%AA_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%91%D7%AA%D7%A6%D7%90_1980_mask_cultivated.png'></a><figcaption>Cultivated mask (binary)</figcaption></figure><figure><a href='overlays/%D7%93%D7%95%D7%92%D7%9E%D7%90%D7%95%D7%AA_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%91%D7%AA%D7%A6%D7%90_1980_overlay.png' target='_blank'><img src='overlays/%D7%93%D7%95%D7%92%D7%9E%D7%90%D7%95%D7%AA_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%91%D7%AA%D7%A6%D7%90_1980_overlay.png'></a><figcaption>Extraction overlay</figcaption></figure></div>
+          <table><thead><tr><th>colour</th><th>class</th><th>area px</th>
+            <th>compact</th><th>closed</th><th>verts</th><th>flag</th></tr></thead>
+            <tbody><tr><td class='c-yellow'>yellow</td><td>cultivated_area</td><td>7576</td><td>0.411</td><td>True</td><td>32</td><td></td></tr><tr><td class='c-red'>red</td><td>cultivated_area</td><td>38344</td><td>0.528</td><td>True</td><td>13</td><td></td></tr><tr><td class='c-red'>red</td><td>cultivated_area</td><td>45054</td><td>0.438</td><td>True</td><td>21</td><td></td></tr><tr><td class='c-black'>black</td><td>hard_negative</td><td>1942</td><td>0.335</td><td>True</td><td>41</td><td> <span class="rev">REVIEW</span></td></tr><tr><td class='c-black'>black</td><td>hard_negative</td><td>5830</td><td>0.163</td><td>True</td><td>49</td><td> <span class="rev">REVIEW</span></td></tr></tbody></table>
+          <details><summary>notes</summary><ul><li>un-framed annotated screenshot (no graticule)</li><li>same-year original: mosaic_mm642_7457_7459_7471_7473_01021980.jpg</li></ul></details>
+        </section>
+        <section class="card">
+          <h2>תצלום מ1908 - פוליגון של עיבוד מסוג שני.jpeg</h2>
+          <div class="meta">
+            <span class="tag">annotated/map_layout</span>
+            <span class="tag">year 1980</span>
+            <span class="tag">yellow 1</span>
+            <span class="tag">red 0</span>
+            <span class="tag">black 0</span>
+          </div>
+          <div class='geo'>ITM/EPSG:2039 &middot; RMSE 0.0474 m &middot; 0.13132 m/px &middot; 12 GCPs <span class='prov'>provisional</span></div>
+          <div class="panels"><figure><a href='viewer_sources/%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%9E1908_-_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%A9%D7%9C_%D7%A2%D7%99%D7%91%D7%95%D7%93_%D7%9E%D7%A1%D7%95%D7%92_%D7%A9%D7%A0%D7%99_src.png' target='_blank'><img src='viewer_sources/%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%9E1908_-_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%A9%D7%9C_%D7%A2%D7%99%D7%91%D7%95%D7%93_%D7%9E%D7%A1%D7%95%D7%92_%D7%A9%D7%A0%D7%99_src.png'></a><figcaption>Source (annotation ink)</figcaption></figure><figure><a href='masks/%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%9E1908_-_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%A9%D7%9C_%D7%A2%D7%99%D7%91%D7%95%D7%93_%D7%9E%D7%A1%D7%95%D7%92_%D7%A9%D7%A0%D7%99_mask_class_preview.png' target='_blank'><img src='masks/%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%9E1908_-_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%A9%D7%9C_%D7%A2%D7%99%D7%91%D7%95%D7%93_%D7%9E%D7%A1%D7%95%D7%92_%D7%A9%D7%A0%D7%99_mask_class_preview.png'></a><figcaption>Extracted class mask</figcaption></figure><figure><a href='masks/%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%9E1908_-_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%A9%D7%9C_%D7%A2%D7%99%D7%91%D7%95%D7%93_%D7%9E%D7%A1%D7%95%D7%92_%D7%A9%D7%A0%D7%99_mask_cultivated.png' target='_blank'><img src='masks/%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%9E1908_-_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%A9%D7%9C_%D7%A2%D7%99%D7%91%D7%95%D7%93_%D7%9E%D7%A1%D7%95%D7%92_%D7%A9%D7%A0%D7%99_mask_cultivated.png'></a><figcaption>Cultivated mask (binary)</figcaption></figure><figure><a href='overlays/%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%9E1908_-_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%A9%D7%9C_%D7%A2%D7%99%D7%91%D7%95%D7%93_%D7%9E%D7%A1%D7%95%D7%92_%D7%A9%D7%A0%D7%99_overlay.png' target='_blank'><img src='overlays/%D7%AA%D7%A6%D7%9C%D7%95%D7%9D_%D7%9E1908_-_%D7%A4%D7%95%D7%9C%D7%99%D7%92%D7%95%D7%9F_%D7%A9%D7%9C_%D7%A2%D7%99%D7%91%D7%95%D7%93_%D7%9E%D7%A1%D7%95%D7%92_%D7%A9%D7%A0%D7%99_overlay.png'></a><figcaption>Extraction overlay</figcaption></figure></div>
+          <table><thead><tr><th>colour</th><th>class</th><th>area px</th>
+            <th>compact</th><th>closed</th><th>verts</th><th>flag</th></tr></thead>
+            <tbody><tr><td class='c-yellow'>yellow</td><td>cultivated_area</td><td>364759</td><td>0.336</td><td>True</td><td>34</td><td></td></tr></tbody></table>
+          <details><summary>notes</summary><ul><li>framed ITM cartographic export; carries coordinate graticule</li><li>implausible year 1908 parsed from name; likely a typo</li><li>OVERRIDE: filename token &#x27;1908&#x27; is a typo; sheet prints photo date 01.02.1980</li><li>same-year original: mosaic_mm642_7457_7459_7471_7473_01021980.jpg</li></ul></details>
+        </section>
+    </body></html>

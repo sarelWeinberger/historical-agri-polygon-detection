@@ -1,0 +1,43 @@
+# Milestone 1 — data analysis & annotation extraction configuration.
+# All parameters that affect the extracted dataset live here for reproducibility.
+seed: 42
+
+source_dir: /home/ubuntu/ME/SOURCE
+output_dir: outputs/milestone1
+
+classification:
+  # left white legend column identifies a framed ITM map export
+  left_info_panel_white_frac: 0.45
+  ink_pixel_threshold: 300          # min yellow+red px to call an image "annotated"
+
+annotation_extraction:
+  min_area_frac: 3.0e-4             # min polygon area as fraction of image area
+  simplify_frac: 0.004             # Douglas-Peucker epsilon as fraction of perimeter
+  close_kernel_frac: 0.006          # gap-sealing kernel as fraction of short side
+  ring_ratio_min:
+    cultivated: 1.6                 # yellow/red: reject open scribbles
+    hard_negative: 4.0              # black: must strongly enclose to beat dark terrain
+  ink_dominance:                    # channel-dominance deltas (grayscale background)
+    yellow_min_over_blue: 35
+    red_min_over_others: 28
+    black_max_channel: 45
+    black_max_saturation: 70
+  legend_ignore_left_frac: 0.175    # map layouts: ignore left info/legend column
+
+# Colour -> class -> review policy
+classes:
+  background: 0
+  cultivated_area: 1
+  hard_negative: 2
+  uncertain_boundary: 3
+color_map:
+  yellow: {class: cultivated_area, review_required: false}
+  red:    {class: cultivated_area, review_required: false}
+  black:  {class: hard_negative,  review_required: true}   # always human-review
+
+georeference:
+  crs: "EPSG:2039"                  # Israeli Transverse Mercator (ITM)
+  provisional: true                 # recovered from 1600px export; redo in Stage 1
+  maon_sheet_gcps:
+    eastings:  [215640, 215680, 215720, 215760]
+    northings: [591440, 591400, 591360]

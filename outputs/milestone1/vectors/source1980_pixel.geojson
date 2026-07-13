@@ -1,0 +1,561 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1033,
+              119
+            ],
+            [
+              1006,
+              119
+            ],
+            [
+              995,
+              123
+            ],
+            [
+              956,
+              121
+            ],
+            [
+              954,
+              124
+            ],
+            [
+              956,
+              178
+            ],
+            [
+              963,
+              188
+            ],
+            [
+              957,
+              212
+            ],
+            [
+              958,
+              233
+            ],
+            [
+              975,
+              238
+            ],
+            [
+              971,
+              259
+            ],
+            [
+              978,
+              265
+            ],
+            [
+              975,
+              286
+            ],
+            [
+              982,
+              300
+            ],
+            [
+              1029,
+              292
+            ],
+            [
+              1031,
+              286
+            ],
+            [
+              1024,
+              281
+            ],
+            [
+              1026,
+              270
+            ],
+            [
+              1036,
+              262
+            ],
+            [
+              1044,
+              262
+            ],
+            [
+              1050,
+              257
+            ],
+            [
+              1051,
+              249
+            ],
+            [
+              1066,
+              246
+            ],
+            [
+              1077,
+              233
+            ],
+            [
+              1077,
+              194
+            ],
+            [
+              1069,
+              192
+            ],
+            [
+              1045,
+              198
+            ],
+            [
+              1026,
+              185
+            ],
+            [
+              1028,
+              175
+            ],
+            [
+              1022,
+              169
+            ],
+            [
+              1020,
+              151
+            ],
+            [
+              1039,
+              147
+            ],
+            [
+              1048,
+              153
+            ],
+            [
+              1063,
+              154
+            ],
+            [
+              1071,
+              144
+            ],
+            [
+              1057,
+              130
+            ],
+            [
+              1033,
+              119
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 0,
+        "color": "yellow",
+        "class": "cultivated_area",
+        "area_px": 15033.5,
+        "perimeter_px": 706.6,
+        "compactness": 0.378,
+        "is_closed_loop": true,
+        "review_required": false,
+        "detection_source": "color_annotation_extraction",
+        "source_image": "source1980.JPE",
+        "year": 1980,
+        "coord_space": "pixel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              901,
+              308
+            ],
+            [
+              816,
+              257
+            ],
+            [
+              704,
+              255
+            ],
+            [
+              677,
+              268
+            ],
+            [
+              538,
+              286
+            ],
+            [
+              507,
+              301
+            ],
+            [
+              505,
+              334
+            ],
+            [
+              511,
+              368
+            ],
+            [
+              569,
+              486
+            ],
+            [
+              638,
+              499
+            ],
+            [
+              758,
+              503
+            ],
+            [
+              865,
+              467
+            ],
+            [
+              901,
+              423
+            ],
+            [
+              912,
+              394
+            ],
+            [
+              901,
+              308
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "color": "red",
+        "class": "cultivated_area",
+        "area_px": 82314.0,
+        "perimeter_px": 1159.0,
+        "compactness": 0.77,
+        "is_closed_loop": true,
+        "review_required": false,
+        "detection_source": "color_annotation_extraction",
+        "source_image": "source1980.JPE",
+        "year": 1980,
+        "coord_space": "pixel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              15,
+              348
+            ],
+            [
+              25,
+              401
+            ],
+            [
+              42,
+              436
+            ],
+            [
+              45,
+              546
+            ],
+            [
+              58,
+              576
+            ],
+            [
+              87,
+              597
+            ],
+            [
+              183,
+              594
+            ],
+            [
+              222,
+              578
+            ],
+            [
+              245,
+              557
+            ],
+            [
+              256,
+              527
+            ],
+            [
+              316,
+              446
+            ],
+            [
+              324,
+              422
+            ],
+            [
+              324,
+              384
+            ],
+            [
+              223,
+              387
+            ],
+            [
+              164,
+              374
+            ],
+            [
+              142,
+              346
+            ],
+            [
+              126,
+              341
+            ],
+            [
+              56,
+              344
+            ],
+            [
+              22,
+              353
+            ],
+            [
+              18,
+              339
+            ],
+            [
+              15,
+              348
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "color": "red",
+        "class": "cultivated_area",
+        "area_px": 55688.0,
+        "perimeter_px": 1036.3,
+        "compactness": 0.652,
+        "is_closed_loop": true,
+        "review_required": false,
+        "detection_source": "color_annotation_extraction",
+        "source_image": "source1980.JPE",
+        "year": 1980,
+        "coord_space": "pixel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1018,
+              17
+            ],
+            [
+              1003,
+              16
+            ],
+            [
+              972,
+              22
+            ],
+            [
+              967,
+              24
+            ],
+            [
+              956,
+              34
+            ],
+            [
+              954,
+              45
+            ],
+            [
+              956,
+              80
+            ],
+            [
+              960,
+              99
+            ],
+            [
+              963,
+              103
+            ],
+            [
+              968,
+              105
+            ],
+            [
+              984,
+              105
+            ],
+            [
+              991,
+              101
+            ],
+            [
+              1002,
+              101
+            ],
+            [
+              1008,
+              98
+            ],
+            [
+              1018,
+              97
+            ],
+            [
+              1030,
+              90
+            ],
+            [
+              1031,
+              79
+            ],
+            [
+              1034,
+              71
+            ],
+            [
+              1035,
+              47
+            ],
+            [
+              1027,
+              30
+            ],
+            [
+              1018,
+              17
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "color": "black",
+        "class": "hard_negative",
+        "area_px": 5989.5,
+        "perimeter_px": 299.6,
+        "compactness": 0.839,
+        "is_closed_loop": true,
+        "review_required": true,
+        "detection_source": "color_annotation_extraction",
+        "source_image": "source1980.JPE",
+        "year": 1980,
+        "coord_space": "pixel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              1033,
+              397
+            ],
+            [
+              1029,
+              424
+            ],
+            [
+              1036,
+              445
+            ],
+            [
+              1047,
+              461
+            ],
+            [
+              1084,
+              492
+            ],
+            [
+              1148,
+              518
+            ],
+            [
+              1222,
+              519
+            ],
+            [
+              1223,
+              501
+            ],
+            [
+              1212,
+              468
+            ],
+            [
+              1184,
+              452
+            ],
+            [
+              1166,
+              433
+            ],
+            [
+              1144,
+              421
+            ],
+            [
+              1086,
+              373
+            ],
+            [
+              1052,
+              381
+            ],
+            [
+              1033,
+              397
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "color": "black",
+        "class": "hard_negative",
+        "area_px": 16623.0,
+        "perimeter_px": 563.1,
+        "compactness": 0.659,
+        "is_closed_loop": true,
+        "review_required": true,
+        "detection_source": "color_annotation_extraction",
+        "source_image": "source1980.JPE",
+        "year": 1980,
+        "coord_space": "pixel"
+      }
+    }
+  ]
+}

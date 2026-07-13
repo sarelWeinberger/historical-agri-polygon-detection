@@ -1,0 +1,202 @@
+{
+  "source_dir": "/home/ubuntu/ME/SOURCE",
+  "images": [
+    {
+      "filename": "mm188_0567_19091969.jpg",
+      "role": "original",
+      "subtype": "orthophoto",
+      "year": 1969,
+      "notes": [
+        "full-resolution historical scan"
+      ]
+    },
+    {
+      "filename": "mosaic_mm642_7457_7459_7471_7473_01021980.jpg",
+      "role": "original",
+      "subtype": "orthophoto",
+      "year": 1980,
+      "notes": [
+        "full-resolution historical scan"
+      ]
+    },
+    {
+      "filename": "source1969.JPE",
+      "role": "annotated",
+      "subtype": "map_layout",
+      "year": 1969,
+      "notes": [
+        "framed ITM cartographic export; carries coordinate graticule",
+        "same-year original: mm188_0567_19091969.jpg"
+      ],
+      "per_color_counts": {
+        "yellow": 1,
+        "red": 0,
+        "black": 0
+      },
+      "n_polygons": 1,
+      "masks": {
+        "class_mask": "outputs/milestone1/masks/source1969_mask_class.png",
+        "class_mask_preview": "outputs/milestone1/masks/source1969_mask_class_preview.png",
+        "cultivated": "outputs/milestone1/masks/source1969_mask_cultivated.png",
+        "hard_negative": "outputs/milestone1/masks/source1969_mask_hardneg.png"
+      },
+      "overlay": "outputs/milestone1/overlays/source1969_overlay.png",
+      "geojson_pixel": "outputs/milestone1/vectors/source1969_pixel.geojson",
+      "ignore_region": [
+        0,
+        0,
+        280,
+        1131
+      ],
+      "georef": {
+        "crs": "urn:ogc:def:crs:EPSG::2039",
+        "gt": [
+          0.1312765808433092,
+          -1.9200447673971273e-10,
+          215572.23506780047,
+          2.997124119285087e-10,
+          -0.13136277244665406,
+          591475.752531807
+        ],
+        "rmse_m": 0.0474,
+        "max_residual_m": 0.0684,
+        "resolution_m_per_px": 0.13132,
+        "n_gcps": 12,
+        "detected_lines": {
+          "vx": [
+            516,
+            821,
+            1126,
+            1430
+          ],
+          "hy": [
+            272,
+            577,
+            881
+          ]
+        },
+        "geojson_itm": "outputs/milestone1/vectors/source1969_itm.geojson",
+        "provisional": true
+      }
+    },
+    {
+      "filename": "source1980.JPE",
+      "role": "annotated",
+      "subtype": "example_crop",
+      "year": 1980,
+      "notes": [
+        "un-framed annotated screenshot (no graticule)",
+        "same-year original: mosaic_mm642_7457_7459_7471_7473_01021980.jpg"
+      ],
+      "per_color_counts": {
+        "yellow": 1,
+        "red": 2,
+        "black": 2
+      },
+      "n_polygons": 5,
+      "masks": {
+        "class_mask": "outputs/milestone1/masks/source1980_mask_class.png",
+        "class_mask_preview": "outputs/milestone1/masks/source1980_mask_class_preview.png",
+        "cultivated": "outputs/milestone1/masks/source1980_mask_cultivated.png",
+        "hard_negative": "outputs/milestone1/masks/source1980_mask_hardneg.png"
+      },
+      "overlay": "outputs/milestone1/overlays/source1980_overlay.png",
+      "geojson_pixel": "outputs/milestone1/vectors/source1980_pixel.geojson",
+      "ignore_region": null
+    },
+    {
+      "filename": "דוגמאות פוליגון בתצא 1980.png",
+      "role": "annotated",
+      "subtype": "example_crop",
+      "year": 1980,
+      "notes": [
+        "un-framed annotated screenshot (no graticule)",
+        "same-year original: mosaic_mm642_7457_7459_7471_7473_01021980.jpg"
+      ],
+      "per_color_counts": {
+        "yellow": 1,
+        "red": 2,
+        "black": 2
+      },
+      "n_polygons": 5,
+      "masks": {
+        "class_mask": "outputs/milestone1/masks/דוגמאות_פוליגון_בתצא_1980_mask_class.png",
+        "class_mask_preview": "outputs/milestone1/masks/דוגמאות_פוליגון_בתצא_1980_mask_class_preview.png",
+        "cultivated": "outputs/milestone1/masks/דוגמאות_פוליגון_בתצא_1980_mask_cultivated.png",
+        "hard_negative": "outputs/milestone1/masks/דוגמאות_פוליגון_בתצא_1980_mask_hardneg.png"
+      },
+      "overlay": "outputs/milestone1/overlays/דוגמאות_פוליגון_בתצא_1980_overlay.png",
+      "geojson_pixel": "outputs/milestone1/vectors/דוגמאות_פוליגון_בתצא_1980_pixel.geojson",
+      "ignore_region": null
+    },
+    {
+      "filename": "תצלום מ1908 - פוליגון של עיבוד מסוג שני.jpeg",
+      "role": "annotated",
+      "subtype": "map_layout",
+      "year": 1980,
+      "notes": [
+        "framed ITM cartographic export; carries coordinate graticule",
+        "implausible year 1908 parsed from name; likely a typo",
+        "OVERRIDE: filename token '1908' is a typo; sheet prints photo date 01.02.1980",
+        "same-year original: mosaic_mm642_7457_7459_7471_7473_01021980.jpg"
+      ],
+      "per_color_counts": {
+        "yellow": 1,
+        "red": 0,
+        "black": 0
+      },
+      "n_polygons": 1,
+      "masks": {
+        "class_mask": "outputs/milestone1/masks/תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני_mask_class.png",
+        "class_mask_preview": "outputs/milestone1/masks/תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני_mask_class_preview.png",
+        "cultivated": "outputs/milestone1/masks/תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני_mask_cultivated.png",
+        "hard_negative": "outputs/milestone1/masks/תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני_mask_hardneg.png"
+      },
+      "overlay": "outputs/milestone1/overlays/תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני_overlay.png",
+      "geojson_pixel": "outputs/milestone1/vectors/תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני_pixel.geojson",
+      "ignore_region": [
+        0,
+        0,
+        280,
+        1131
+      ],
+      "georef": {
+        "crs": "urn:ogc:def:crs:EPSG::2039",
+        "gt": [
+          0.1312765808433092,
+          -1.9200447673971273e-10,
+          215572.23506780047,
+          2.997124119285087e-10,
+          -0.13136277244665406,
+          591475.752531807
+        ],
+        "rmse_m": 0.0474,
+        "max_residual_m": 0.0684,
+        "resolution_m_per_px": 0.13132,
+        "n_gcps": 12,
+        "detected_lines": {
+          "vx": [
+            516,
+            821,
+            1126,
+            1430
+          ],
+          "hy": [
+            272,
+            577,
+            881
+          ]
+        },
+        "geojson_itm": "outputs/milestone1/vectors/תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני_itm.geojson",
+        "provisional": true
+      }
+    }
+  ],
+  "totals": {
+    "yellow": 4,
+    "red": 4,
+    "black": 4,
+    "cultivated_polys": 8,
+    "hardneg_polys": 4
+  }
+}
