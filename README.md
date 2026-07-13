@@ -41,6 +41,23 @@ Each experiment (`scripts/exp{1..7}_*.py`) loads **one** model at a time with st
 discipline (verify free → track peak → unload → `empty_cache` → re-verify); peak VRAM never
 exceeded 2.4 GB. Florence-2 needs transformers 4.x, isolated in `.venv_flor`.
 
+### Fully-automatic pipeline (exp 8): CLIP/DINOv2 → region proposal → SAM 2
+
+Tests whether a CLIP or DINOv2 score map can **replace the human SAM 2 prompt** (no GT ever
+used to build a prompt). Report: [`outputs/reports/exp8_auto_pipeline.md`](outputs/reports/exp8_auto_pipeline.md);
+7-panel comparison maps + evolution-flow figures in `outputs/zeroshot/exp8_auto/maps_out/`.
+
+**Result:** the automatic pipeline localises the right fields and beats GDINO+SAM 2
+(CLIP→SAM2 IoU 0.23, DINOv2→SAM2 0.21, up to 0.41 on good targets), but stays ~3× below the
+human-prompted ceiling (0.74). The **gap is localisation, not segmentation** (same SAM 2:
+human box → 0.74, auto box → 0.23). Viable as an automatic *proposal* stage for a
+human-review tool; not yet as an autonomous high-precision delineator.
+
+```bash
+python scripts/exp8_auto_pipeline.py        # CLIP+DINOv2 maps -> region proposal -> SAM2
+python scripts/render_exp8_maps.py          # 7-panel comparison + flow figures
+```
+
 ```bash
 pip install -r requirements-gpu.txt          # Blackwell: torch cu128
 python src/evaluation/data.py                 # build ink-free eval targets + GT

@@ -181,6 +181,28 @@ def score_prediction(pred_mask, gt_pos, gt_neg, pred_boxes=None, gt_boxes=None):
     return out
 
 
+def boundary_f1(pred_mask, gt_mask, tol_frac=0.01):
+    """Boundary F1: fraction of pred/gt boundary pixels matched within a tolerance.
+    tol = tol_frac * image diagonal."""
+    h, w = gt_mask.shape
+    tol = max(1, int(tol_frac * (h**2 + w**2) ** 0.5))
+    pe = cv2.Canny((pred_mask > 0).astype(np.uint8) * 255, 50, 150)
+    ge = cv2.Canny((gt_mask > 0).astype(np.uint8) * 255, 50, 150)
+    if pe.sum() == 0 or ge.sum() == 0:
+        return 0.0
+    k = 2 * tol + 1
+    ge_d = cv2.dilate(ge, np.ones((k, k), np.uint8))
+    pe_d = cv2.dilate(pe, np.ones((k, k), np.uint8))
+    prec = (pe > 0)[ge_d > 0].sum() / max((pe > 0).sum(), 1)
+    rec = (ge > 0)[pe_d > 0].sum() / max((ge > 0).sum(), 1)
+    return float(2 * prec * rec / (prec + rec)) if (prec + rec) else 0.0
+
+
+def n_fragments(mask):
+    n, _ = cv2.connectedComponents((mask > 0).astype(np.uint8))
+    return int(n - 1)
+
+
 def gt_boxes_from_mask(gt_pos):
     """One bounding box per connected cultivated component."""
     n, lab, stats, _ = cv2.connectedComponentsWithStats((gt_pos > 0).astype(np.uint8), 8)

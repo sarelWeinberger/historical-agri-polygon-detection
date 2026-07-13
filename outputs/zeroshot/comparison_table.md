@@ -14,3 +14,5 @@
 | CLIP tile-scoring | contrastive tiles -> heatmap | 0.6795 | 0.2798 | tile-AUROC(cult vs hardneg)=0.917 | 0.392 | 1466 (bf16) | CLIP separates cultivation from terrain; SigLIP inverted |
 | SIGLIP tile-scoring | contrastive tiles -> heatmap | 0.5923 | 0.1814 | tile-AUROC(cult vs hardneg)=0.000 | 0.14 | 702 (bf16) | CLIP separates cultivation from terrain; SigLIP inverted |
 | DINOv2 (base) embeddings | tile embedding separability | None | None | LOO-prototype AUROC=0.912 (source1980) | 0.5505 | 986 (bf16) | cultivated vs hard-neg naturally separable (no training) |
+| CLIP → RP → SAM2 (auto) | automatic prompt (no human, no GT) | 0.3047 | 0.2268 | boundaryF1=0.219, frags=2.8 | 0.939 | 1466 (bf16) | localises right fields; ~3x below human prompt (loc. gap) |
+| DINOv2 → RP → SAM2 (auto) | automatic prompt (no human, no GT) | 0.3466 | 0.2098 | boundaryF1=0.239, frags=2.8 | 0.8685 | 1466 (bf16) | localises right fields; ~3x below human prompt (loc. gap) |

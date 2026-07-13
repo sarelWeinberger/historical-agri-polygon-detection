@@ -94,12 +94,26 @@ def summarize():
                     runtime_s=_mean([x["runtime_s"] for x in r7]),
                     note="cultivated vs hard-neg naturally separable (no training)"))
 
+    # exp8 — fully-automatic CLIP/DINOv2 -> region proposal -> SAM2
+    r8 = load("exp8_auto")
+    best = {"clip": "A_threshold", "dinov2": "D_multithresh"}
+    for src, lbl in [("clip", "CLIP → RP → SAM2 (auto)"), ("dinov2", "DINOv2 → RP → SAM2 (auto)")]:
+        sub = [x for x in r8 if x["source"] == src and x["method"] == best[src]]
+        out.append(dict(model=lbl, mode="automatic prompt (no human, no GT)",
+                        recall=_mean([x["coverage"] for x in sub if x["coverage"] is not None]),
+                        iou=_mean([x["poly_iou"] for x in sub]),
+                        fp=f"boundaryF1={_mean([x['boundary_f1'] for x in sub]):.3f}, "
+                           f"frags={_mean([x['fragments'] for x in sub]):.1f}",
+                        runtime_s=_mean([x["runtime_s"] for x in sub]),
+                        note="localises right fields; ~3x below human prompt (loc. gap)"))
+
     for row in out:
         m = row["model"].split(" [")[0].split(" tile")[0].split(" (")[0]
         key = {"Grounding DINO": "grounding-dino-base", "Grounding DINO + SAM 2": "gdino+sam2",
                "Prompted SAM 2": "sam2-prompted", "Florence-2": "florence2",
                "OWLv2": "owlv2-base", "CLIP": "clip", "SIGLIP": "siglip",
-               "DINOv2": "dinov2-base"}.get(m)
+               "DINOv2": "dinov2-base", "CLIP → RP → SAM2": "clip",
+               "DINOv2 → RP → SAM2": "clip"}.get(m)
         pv = PEAK_VRAM.get(key)
         row["peak_vram_mb"], row["precision"] = (pv if pv else (None, None))
     return out

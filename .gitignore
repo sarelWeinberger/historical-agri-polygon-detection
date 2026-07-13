@@ -41,3 +41,6 @@ outputs/milestone1/thumbnails/
 # keep: code, configs, reports, small masks/vectors/overlays, manifests
 !outputs/milestone1/manifest.json
 !outputs/milestone1/dataset_summary.json
+
+# exp8: keep rendered maps + results + polys; drop the raw .npy score maps
+outputs/zeroshot/exp8_auto/maps/

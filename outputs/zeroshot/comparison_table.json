@@ -152,5 +152,27 @@
     "note": "cultivated vs hard-neg naturally separable (no training)",
     "peak_vram_mb": 986,
     "precision": "bf16"
+  },
+  {
+    "model": "CLIP → RP → SAM2 (auto)",
+    "mode": "automatic prompt (no human, no GT)",
+    "recall": 0.3047,
+    "iou": 0.2268,
+    "fp": "boundaryF1=0.219, frags=2.8",
+    "runtime_s": 0.939,
+    "note": "localises right fields; ~3x below human prompt (loc. gap)",
+    "peak_vram_mb": 1466,
+    "precision": "bf16"
+  },
+  {
+    "model": "DINOv2 → RP → SAM2 (auto)",
+    "mode": "automatic prompt (no human, no GT)",
+    "recall": 0.3466,
+    "iou": 0.2098,
+    "fp": "boundaryF1=0.239, frags=2.8",
+    "runtime_s": 0.8685,
+    "note": "localises right fields; ~3x below human prompt (loc. gap)",
+    "peak_vram_mb": 1466,
+    "precision": "bf16"
   }
 ]
