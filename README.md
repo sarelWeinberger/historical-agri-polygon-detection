@@ -13,16 +13,41 @@ detectors and temporal analysis.
 
 ## Status
 
-| Milestone | Description | State |
+| Phase | Description | State |
 |---|---|---|
-| **1** | Scan data, classify images, verify annotations, extract polygons, build masks, viewer + report | ✅ **done** |
-| 2 | Baseline semantic segmentation + polygonisation + evaluation | ⏳ planned |
-| 3 | Grounding DINO + SAM2 + classical texture detector + hard-negative mining | ⏳ planned |
-| 4 | Registration + temporal analysis + ensemble fusion + final GeoJSON | ⏳ planned |
+| **M1** | Scan data, classify images, verify annotations, extract polygons, build masks, viewer + report | ✅ **done** |
+| **Zero-shot eval** | Evaluate 7 pretrained models (no training) for cultivation detection on a single 32 GB GPU | ✅ **done** |
+| M2 | Baseline semantic segmentation | ⏸ deferred (needs a real labelled set) |
+| M3/M4 | Texture detector, temporal analysis, ensemble, final GeoJSON | ⏳ planned |
 
-> **Do not start model training yet** — see the Milestone 1 report's "next steps".
-> The current labelled set is one ground-truth field per year, which is insufficient
-> to train a segmenter.
+> **No training has been performed.** The current labelled set is ~one ground-truth field
+> per year — insufficient to train a segmenter or trust a holdout.
+
+## Zero-shot pretrained-model evaluation (single 32 GB Blackwell GPU)
+
+Can off-the-shelf models find cultivated fields in 1969/1980 aerial scans *without
+training*? Full report: [`outputs/reports/zeroshot_evaluation.md`](outputs/reports/zeroshot_evaluation.md);
+comparison table: [`outputs/zeroshot/comparison_table.md`](outputs/zeroshot/comparison_table.md).
+
+**Verdict:** open-vocabulary *detectors* fail (Grounding DINO boxes the whole scene and is
+prompt-insensitive; OWLv2 misses cultivation; Florence-2 calls the scenes "airplane/poster"
+— out of domain). But two signals **work zero-shot**: **prompted SAM 2** delineates
+boundaries at IoU 0.74 (0.86 best) given a human prompt, and **CLIP-L / DINOv2 tile
+embeddings** separate cultivated land from look-alike terrain at **AUROC ≈ 0.91–0.92**.
+Recommended path: CLIP/DINOv2 region-prior → SAM 2 boundaries → human review; defer training
+until more sites are digitised.
+
+Each experiment (`scripts/exp{1..7}_*.py`) loads **one** model at a time with strict VRAM
+discipline (verify free → track peak → unload → `empty_cache` → re-verify); peak VRAM never
+exceeded 2.4 GB. Florence-2 needs transformers 4.x, isolated in `.venv_flor`.
+
+```bash
+pip install -r requirements-gpu.txt          # Blackwell: torch cu128
+python src/evaluation/data.py                 # build ink-free eval targets + GT
+for i in 1 2 3 5 6 7; do python scripts/exp${i}_*.py; done
+. .venv_flor/bin/activate && python scripts/exp4_florence2.py   # isolated env
+python scripts/aggregate_results.py           # comparison table
+```
 
 ## Milestone 1 — what it does
 

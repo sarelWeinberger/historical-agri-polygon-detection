@@ -1,0 +1,44 @@
+[
+  {
+    "model": "dinov2-base",
+    "exp": "exp7",
+    "target": "source1969",
+    "year": 1969,
+    "n_tiles": 513,
+    "n_pos_tiles": 115,
+    "n_neg_tiles": 0,
+    "runtime_s": 0.886
+  },
+  {
+    "model": "dinov2-base",
+    "exp": "exp7",
+    "target": "source1980",
+    "year": 1980,
+    "n_tiles": 231,
+    "n_pos_tiles": 43,
+    "n_neg_tiles": 5,
+    "runtime_s": 0.294,
+    "loo_prototype_auroc": 0.9116,
+    "loo_1nn_agreement": 0.9792
+  },
+  {
+    "model": "dinov2-base",
+    "exp": "exp7",
+    "target": "דוגמאות_פוליגון_בתצא_1980",
+    "year": 1980,
+    "n_tiles": 260,
+    "n_pos_tiles": 24,
+    "n_neg_tiles": 0,
+    "runtime_s": 0.355
+  },
+  {
+    "model": "dinov2-base",
+    "exp": "exp7",
+    "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+    "year": 1980,
+    "n_tiles": 513,
+    "n_pos_tiles": 115,
+    "n_neg_tiles": 0,
+    "runtime_s": 0.667
+  }
+]

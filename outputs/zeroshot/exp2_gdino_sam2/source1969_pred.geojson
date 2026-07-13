@@ -1,0 +1,1 @@
+{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {"model": "gdino+sam2", "prompt": "cultivated agricultural field"}, "geometry": {"type": "Polygon", "coordinates": [[[283, 24], [284, 1105], [1574, 1102], [1571, 24], [283, 24]]]}}]}

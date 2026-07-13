@@ -6,9 +6,20 @@
 
 # --- python venv / caches ---
 .venv/
+.venv_flor/
+.hf_cache/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+
+# --- zero-shot: keep results/tables/reports/plots + curated key overlays only ---
+outputs/zeroshot/*/overlays/
+outputs/zeroshot/data/
+outputs/zeroshot/exp1_grounding_dino/overlays/
+!outputs/zeroshot/*/results.json
+!outputs/zeroshot/comparison_table.*
+!outputs/zeroshot/key_overlays/
+!outputs/zeroshot/exp7_dinov2/plots/
 
 # --- large raw imagery (kept out of git; store via DVC / external storage) ---
 data/raw/

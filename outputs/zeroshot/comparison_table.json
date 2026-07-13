@@ -1,0 +1,156 @@
+[
+  {
+    "model": "Grounding DINO (base)",
+    "mode": "open-vocab detect (best prompt/thr)",
+    "recall": 1.0,
+    "iou": 0.2634,
+    "fp": "whole-scene box; fp_on_black up to 1.0",
+    "runtime_s": 0.1491,
+    "note": "prompt-insensitive; boxes cover ~84% of image; pos==neg prompts",
+    "peak_vram_mb": 2350,
+    "precision": "fp32"
+  },
+  {
+    "model": "Grounding DINO + SAM 2",
+    "mode": "GDINO box -> SAM2 mask",
+    "recall": 0.9691,
+    "iou": 0.1955,
+    "fp": "fp_on_black ~0.98 (inherits GDINO box)",
+    "runtime_s": 0.1496,
+    "note": "SAM2 refines faithfully but GDINO boxes are unusable",
+    "peak_vram_mb": 2350,
+    "precision": "fp32/bf16"
+  },
+  {
+    "model": "Prompted SAM 2 [A_single_point]",
+    "mode": "human prompt -> mask",
+    "recall": null,
+    "iou": 0.5255,
+    "fp": "fp_on_black 0.000",
+    "runtime_s": 0.1964,
+    "note": "boundary quality given a correct human prompt",
+    "peak_vram_mb": 1424,
+    "precision": "bf16"
+  },
+  {
+    "model": "Prompted SAM 2 [B_multi_points]",
+    "mode": "human prompt -> mask",
+    "recall": null,
+    "iou": 0.7254,
+    "fp": "fp_on_black 0.084",
+    "runtime_s": 0.1424,
+    "note": "boundary quality given a correct human prompt",
+    "peak_vram_mb": 1424,
+    "precision": "bf16"
+  },
+  {
+    "model": "Prompted SAM 2 [C_pos_neg_points]",
+    "mode": "human prompt -> mask",
+    "recall": null,
+    "iou": 0.7207,
+    "fp": "fp_on_black 0.023",
+    "runtime_s": 0.1482,
+    "note": "boundary quality given a correct human prompt",
+    "peak_vram_mb": 1424,
+    "precision": "bf16"
+  },
+  {
+    "model": "Prompted SAM 2 [D_box]",
+    "mode": "human prompt -> mask",
+    "recall": null,
+    "iou": 0.7433,
+    "fp": "fp_on_black 0.090",
+    "runtime_s": 0.1469,
+    "note": "boundary quality given a correct human prompt",
+    "peak_vram_mb": 1424,
+    "precision": "bf16"
+  },
+  {
+    "model": "Florence-2 [<OD>]",
+    "mode": "VLM task",
+    "recall": 0.6321,
+    "iou": 0.1562,
+    "fp": "oversized boxes / weak masks",
+    "runtime_s": 0.4843,
+    "note": "labels scenes 'airplane/poster/animal' -> out of domain",
+    "peak_vram_mb": 2122,
+    "precision": "fp16"
+  },
+  {
+    "model": "Florence-2 [<REGION_PROPOSAL>]",
+    "mode": "VLM task",
+    "recall": 1.0,
+    "iou": 0.1697,
+    "fp": "oversized boxes / weak masks",
+    "runtime_s": 0.0978,
+    "note": "labels scenes 'airplane/poster/animal' -> out of domain",
+    "peak_vram_mb": 2122,
+    "precision": "fp16"
+  },
+  {
+    "model": "Florence-2 [phrase_grounding]",
+    "mode": "VLM task",
+    "recall": 1.0,
+    "iou": 0.1988,
+    "fp": "oversized boxes / weak masks",
+    "runtime_s": 0.1176,
+    "note": "labels scenes 'airplane/poster/animal' -> out of domain",
+    "peak_vram_mb": 2122,
+    "precision": "fp16"
+  },
+  {
+    "model": "Florence-2 [referring_seg]",
+    "mode": "VLM task",
+    "recall": 0.2732,
+    "iou": 0.1014,
+    "fp": "oversized boxes / weak masks",
+    "runtime_s": 6.1463,
+    "note": "labels scenes 'airplane/poster/animal' -> out of domain",
+    "peak_vram_mb": 2122,
+    "precision": "fp16"
+  },
+  {
+    "model": "OWLv2 (base)",
+    "mode": "open-vocab detect",
+    "recall": 0.264,
+    "iou": 0.3656,
+    "fp": "terrain prompts fire ~47 boxes; pos prompts ~0",
+    "runtime_s": 0.0262,
+    "note": "near-zero recall on cultivation; over-fires on terrain",
+    "peak_vram_mb": 440,
+    "precision": "bf16"
+  },
+  {
+    "model": "CLIP tile-scoring",
+    "mode": "contrastive tiles -> heatmap",
+    "recall": 0.6795,
+    "iou": 0.2798,
+    "fp": "tile-AUROC(cult vs hardneg)=0.917",
+    "runtime_s": 0.392,
+    "note": "CLIP separates cultivation from terrain; SigLIP inverted",
+    "peak_vram_mb": 1466,
+    "precision": "bf16"
+  },
+  {
+    "model": "SIGLIP tile-scoring",
+    "mode": "contrastive tiles -> heatmap",
+    "recall": 0.5923,
+    "iou": 0.1814,
+    "fp": "tile-AUROC(cult vs hardneg)=0.000",
+    "runtime_s": 0.14,
+    "note": "CLIP separates cultivation from terrain; SigLIP inverted",
+    "peak_vram_mb": 702,
+    "precision": "bf16"
+  },
+  {
+    "model": "DINOv2 (base) embeddings",
+    "mode": "tile embedding separability",
+    "recall": null,
+    "iou": null,
+    "fp": "LOO-prototype AUROC=0.912 (source1980)",
+    "runtime_s": 0.5505,
+    "note": "cultivated vs hard-neg naturally separable (no training)",
+    "peak_vram_mb": 986,
+    "precision": "bf16"
+  }
+]
