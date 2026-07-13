@@ -1,0 +1,954 @@
+{
+  "clip_ms+tex_2:1": {
+    "summary": {
+      "mean_iou": 0.365,
+      "median_iou": 0.2544,
+      "min_iou": 0.2373,
+      "max_iou": 0.7142,
+      "mean_cov": 0.6934,
+      "mean_bf1": 0.27,
+      "mean_frag": 2.0
+    },
+    "spec": {
+      "rule": "weighted_avg",
+      "use": [
+        "clip_ms",
+        "texture"
+      ],
+      "weights": {
+        "clip_ms": 2,
+        "texture": 1
+      }
+    },
+    "robust_score": 0.3012,
+    "rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.7142,
+        "coverage": 0.8052401436822395,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0258,
+        "area_ratio": 0.933,
+        "boundary_f1": 0.4686,
+        "fragments": 2,
+        "runtime_s": 6.16
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.2478,
+        "coverage": 0.3015466756516837,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0376,
+        "area_ratio": 0.518,
+        "boundary_f1": 0.2777,
+        "fragments": 2,
+        "runtime_s": 5.45
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.2373,
+        "coverage": 0.6667354339942235,
+        "fp_on_black": 0.7397787397787398,
+        "fp_area_frac": 0.1633,
+        "area_ratio": 2.476,
+        "boundary_f1": 0.3336,
+        "fragments": 3,
+        "runtime_s": 5.51
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.2609,
+        "coverage": 1.0,
+        "fp_on_black": null,
+        "fp_area_frac": 0.5737,
+        "area_ratio": 3.833,
+        "boundary_f1": 0.0,
+        "fragments": 1,
+        "runtime_s": 5.65
+      }
+    ],
+    "_rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.7142,
+        "coverage": 0.8052401436822395,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0258,
+        "area_ratio": 0.933,
+        "boundary_f1": 0.4686,
+        "fragments": 2,
+        "runtime_s": 6.16,
+        "_pred": null
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.2478,
+        "coverage": 0.3015466756516837,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0376,
+        "area_ratio": 0.518,
+        "boundary_f1": 0.2777,
+        "fragments": 2,
+        "runtime_s": 5.45,
+        "_pred": null
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.2373,
+        "coverage": 0.6667354339942235,
+        "fp_on_black": 0.7397787397787398,
+        "fp_area_frac": 0.1633,
+        "area_ratio": 2.476,
+        "boundary_f1": 0.3336,
+        "fragments": 3,
+        "runtime_s": 5.51,
+        "_pred": null
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.2609,
+        "coverage": 1.0,
+        "fp_on_black": null,
+        "fp_area_frac": 0.5737,
+        "area_ratio": 3.833,
+        "boundary_f1": 0.0,
+        "fragments": 1,
+        "runtime_s": 5.65,
+        "_pred": null
+      }
+    ]
+  },
+  "clip_lc_only": {
+    "summary": {
+      "mean_iou": 0.3731,
+      "median_iou": 0.3594,
+      "min_iou": 0.1675,
+      "max_iou": 0.6062,
+      "mean_cov": 0.4663,
+      "mean_bf1": 0.3383,
+      "mean_frag": 3.5
+    },
+    "spec": {
+      "rule": "weighted_avg",
+      "use": [
+        "clip_lc"
+      ]
+    },
+    "robust_score": 0.2703,
+    "rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.2235,
+        "coverage": 0.24461464554377613,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0191,
+        "area_ratio": 0.339,
+        "boundary_f1": 0.1829,
+        "fragments": 3,
+        "runtime_s": 5.58
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.4954,
+        "coverage": 0.5447123390634415,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0173,
+        "area_ratio": 0.644,
+        "boundary_f1": 0.4077,
+        "fragments": 4,
+        "runtime_s": 5.54
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1675,
+        "coverage": 0.31648895741492755,
+        "fp_on_black": 0.12301587301587301,
+        "fp_area_frac": 0.0813,
+        "area_ratio": 1.206,
+        "boundary_f1": 0.3064,
+        "fragments": 4,
+        "runtime_s": 5.47
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.6062,
+        "coverage": 0.7593374472231244,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0512,
+        "area_ratio": 1.012,
+        "boundary_f1": 0.4563,
+        "fragments": 3,
+        "runtime_s": 5.74
+      }
+    ],
+    "_rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.2235,
+        "coverage": 0.24461464554377613,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0191,
+        "area_ratio": 0.339,
+        "boundary_f1": 0.1829,
+        "fragments": 3,
+        "runtime_s": 5.58,
+        "_pred": null
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.4954,
+        "coverage": 0.5447123390634415,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0173,
+        "area_ratio": 0.644,
+        "boundary_f1": 0.4077,
+        "fragments": 4,
+        "runtime_s": 5.54,
+        "_pred": null
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1675,
+        "coverage": 0.31648895741492755,
+        "fp_on_black": 0.12301587301587301,
+        "fp_area_frac": 0.0813,
+        "area_ratio": 1.206,
+        "boundary_f1": 0.3064,
+        "fragments": 4,
+        "runtime_s": 5.47,
+        "_pred": null
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.6062,
+        "coverage": 0.7593374472231244,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0512,
+        "area_ratio": 1.012,
+        "boundary_f1": 0.4563,
+        "fragments": 3,
+        "runtime_s": 5.74,
+        "_pred": null
+      }
+    ]
+  },
+  "clip_lc+tex_2:1": {
+    "summary": {
+      "mean_iou": 0.2558,
+      "median_iou": 0.2647,
+      "min_iou": 0.1336,
+      "max_iou": 0.36,
+      "mean_cov": 0.3385,
+      "mean_bf1": 0.1935,
+      "mean_frag": 2.75
+    },
+    "spec": {
+      "rule": "weighted_avg",
+      "use": [
+        "clip_lc",
+        "texture"
+      ],
+      "weights": {
+        "clip_lc": 2,
+        "texture": 1
+      }
+    },
+    "robust_score": 0.1947,
+    "rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.2072,
+        "coverage": 0.20719830551036675,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0,
+        "area_ratio": 0.207,
+        "boundary_f1": 0.1354,
+        "fragments": 1,
+        "runtime_s": 5.67
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.3223,
+        "coverage": 0.3607311557626141,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0207,
+        "area_ratio": 0.48,
+        "boundary_f1": 0.2686,
+        "fragments": 4,
+        "runtime_s": 5.46
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1336,
+        "coverage": 0.20362005689591522,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0479,
+        "area_ratio": 0.728,
+        "boundary_f1": 0.0902,
+        "fragments": 3,
+        "runtime_s": 5.52
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.36,
+        "coverage": 0.5823537599515285,
+        "fp_on_black": null,
+        "fp_area_frac": 0.125,
+        "area_ratio": 1.2,
+        "boundary_f1": 0.28,
+        "fragments": 3,
+        "runtime_s": 5.71
+      }
+    ],
+    "_rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.2072,
+        "coverage": 0.20719830551036675,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0,
+        "area_ratio": 0.207,
+        "boundary_f1": 0.1354,
+        "fragments": 1,
+        "runtime_s": 5.67,
+        "_pred": null
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.3223,
+        "coverage": 0.3607311557626141,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0207,
+        "area_ratio": 0.48,
+        "boundary_f1": 0.2686,
+        "fragments": 4,
+        "runtime_s": 5.46,
+        "_pred": null
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1336,
+        "coverage": 0.20362005689591522,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0479,
+        "area_ratio": 0.728,
+        "boundary_f1": 0.0902,
+        "fragments": 3,
+        "runtime_s": 5.52,
+        "_pred": null
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.36,
+        "coverage": 0.5823537599515285,
+        "fp_on_black": null,
+        "fp_area_frac": 0.125,
+        "area_ratio": 1.2,
+        "boundary_f1": 0.28,
+        "fragments": 3,
+        "runtime_s": 5.71,
+        "_pred": null
+      }
+    ]
+  },
+  "clip_lc+tex_3:1": {
+    "summary": {
+      "mean_iou": 0.218,
+      "median_iou": 0.1876,
+      "min_iou": 0.1552,
+      "max_iou": 0.3415,
+      "mean_cov": 0.3126,
+      "mean_bf1": 0.1838,
+      "mean_frag": 3.75
+    },
+    "spec": {
+      "rule": "weighted_avg",
+      "use": [
+        "clip_lc",
+        "texture"
+      ],
+      "weights": {
+        "clip_lc": 3,
+        "texture": 1
+      }
+    },
+    "robust_score": 0.1866,
+    "rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.1846,
+        "coverage": 0.22456354882029894,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0438,
+        "area_ratio": 0.441,
+        "boundary_f1": 0.1364,
+        "fragments": 4,
+        "runtime_s": 5.69
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.3415,
+        "coverage": 0.39902547122742676,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0292,
+        "area_ratio": 0.567,
+        "boundary_f1": 0.2632,
+        "fragments": 4,
+        "runtime_s": 5.43
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1907,
+        "coverage": 0.4208777606462681,
+        "fp_on_black": 0.1645021645021645,
+        "fp_area_frac": 0.1103,
+        "area_ratio": 1.628,
+        "boundary_f1": 0.1687,
+        "fragments": 3,
+        "runtime_s": 5.48
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.1552,
+        "coverage": 0.20588098831607993,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0661,
+        "area_ratio": 0.533,
+        "boundary_f1": 0.167,
+        "fragments": 4,
+        "runtime_s": 5.69
+      }
+    ],
+    "_rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.1846,
+        "coverage": 0.22456354882029894,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0438,
+        "area_ratio": 0.441,
+        "boundary_f1": 0.1364,
+        "fragments": 4,
+        "runtime_s": 5.69,
+        "_pred": null
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.3415,
+        "coverage": 0.39902547122742676,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0292,
+        "area_ratio": 0.567,
+        "boundary_f1": 0.2632,
+        "fragments": 4,
+        "runtime_s": 5.43,
+        "_pred": null
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1907,
+        "coverage": 0.4208777606462681,
+        "fp_on_black": 0.1645021645021645,
+        "fp_area_frac": 0.1103,
+        "area_ratio": 1.628,
+        "boundary_f1": 0.1687,
+        "fragments": 3,
+        "runtime_s": 5.48,
+        "_pred": null
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.1552,
+        "coverage": 0.20588098831607993,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0661,
+        "area_ratio": 0.533,
+        "boundary_f1": 0.167,
+        "fragments": 4,
+        "runtime_s": 5.69,
+        "_pred": null
+      }
+    ]
+  },
+  "clip_lc_gate_tex": {
+    "summary": {
+      "mean_iou": 0.2411,
+      "median_iou": 0.2422,
+      "min_iou": 0.1126,
+      "max_iou": 0.3675,
+      "mean_cov": 0.312,
+      "mean_bf1": 0.1884,
+      "mean_frag": 4.0
+    },
+    "spec": {
+      "rule": "gate",
+      "use": [
+        "clip_lc",
+        "texture"
+      ]
+    },
+    "robust_score": 0.1769,
+    "rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.1721,
+        "coverage": 0.1810603661931849,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0105,
+        "area_ratio": 0.233,
+        "boundary_f1": 0.0847,
+        "fragments": 2,
+        "runtime_s": 5.68
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.3123,
+        "coverage": 0.3655325242498267,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0295,
+        "area_ratio": 0.536,
+        "boundary_f1": 0.2514,
+        "fragments": 5,
+        "runtime_s": 5.37
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1126,
+        "coverage": 0.20544420074268713,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0753,
+        "area_ratio": 1.029,
+        "boundary_f1": 0.0731,
+        "fragments": 5,
+        "runtime_s": 5.54
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.3675,
+        "coverage": 0.49606851509684746,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0709,
+        "area_ratio": 0.846,
+        "boundary_f1": 0.3444,
+        "fragments": 4,
+        "runtime_s": 5.77
+      }
+    ],
+    "_rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.1721,
+        "coverage": 0.1810603661931849,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0105,
+        "area_ratio": 0.233,
+        "boundary_f1": 0.0847,
+        "fragments": 2,
+        "runtime_s": 5.68,
+        "_pred": null
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.3123,
+        "coverage": 0.3655325242498267,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0295,
+        "area_ratio": 0.536,
+        "boundary_f1": 0.2514,
+        "fragments": 5,
+        "runtime_s": 5.37,
+        "_pred": null
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1126,
+        "coverage": 0.20544420074268713,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0753,
+        "area_ratio": 1.029,
+        "boundary_f1": 0.0731,
+        "fragments": 5,
+        "runtime_s": 5.54,
+        "_pred": null
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.3675,
+        "coverage": 0.49606851509684746,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0709,
+        "area_ratio": 0.846,
+        "boundary_f1": 0.3444,
+        "fragments": 4,
+        "runtime_s": 5.77,
+        "_pred": null
+      }
+    ]
+  },
+  "clipms+cliplc": {
+    "summary": {
+      "mean_iou": 0.3071,
+      "median_iou": 0.2203,
+      "min_iou": 0.1484,
+      "max_iou": 0.6396,
+      "mean_cov": 0.4364,
+      "mean_bf1": 0.2776,
+      "mean_frag": 2.75
+    },
+    "spec": {
+      "rule": "weighted_avg",
+      "use": [
+        "clip_ms",
+        "clip_lc"
+      ]
+    },
+    "robust_score": 0.2278,
+    "rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.1718,
+        "coverage": 0.23292681595353254,
+        "fp_on_black": null,
+        "fp_area_frac": 0.072,
+        "area_ratio": 0.589,
+        "boundary_f1": 0.1678,
+        "fragments": 2,
+        "runtime_s": 5.73
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.2688,
+        "coverage": 0.3349100310371863,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0427,
+        "area_ratio": 0.581,
+        "boundary_f1": 0.1413,
+        "fragments": 3,
+        "runtime_s": 5.58
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1484,
+        "coverage": 0.3972941866272883,
+        "fp_on_black": 0.039802789802789805,
+        "fp_area_frac": 0.1532,
+        "area_ratio": 2.074,
+        "boundary_f1": 0.3448,
+        "fragments": 2,
+        "runtime_s": 5.62
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.6396,
+        "coverage": 0.7804754899686409,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0446,
+        "area_ratio": 1.001,
+        "boundary_f1": 0.4566,
+        "fragments": 4,
+        "runtime_s": 5.76
+      }
+    ],
+    "_rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.1718,
+        "coverage": 0.23292681595353254,
+        "fp_on_black": null,
+        "fp_area_frac": 0.072,
+        "area_ratio": 0.589,
+        "boundary_f1": 0.1678,
+        "fragments": 2,
+        "runtime_s": 5.73,
+        "_pred": null
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.2688,
+        "coverage": 0.3349100310371863,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0427,
+        "area_ratio": 0.581,
+        "boundary_f1": 0.1413,
+        "fragments": 3,
+        "runtime_s": 5.58,
+        "_pred": null
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1484,
+        "coverage": 0.3972941866272883,
+        "fp_on_black": 0.039802789802789805,
+        "fp_area_frac": 0.1532,
+        "area_ratio": 2.074,
+        "boundary_f1": 0.3448,
+        "fragments": 2,
+        "runtime_s": 5.62,
+        "_pred": null
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.6396,
+        "coverage": 0.7804754899686409,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0446,
+        "area_ratio": 1.001,
+        "boundary_f1": 0.4566,
+        "fragments": 4,
+        "runtime_s": 5.76,
+        "_pred": null
+      }
+    ]
+  },
+  "clipms+cliplc+tex": {
+    "summary": {
+      "mean_iou": 0.3272,
+      "median_iou": 0.2562,
+      "min_iou": 0.1874,
+      "max_iou": 0.6092,
+      "mean_cov": 0.4657,
+      "mean_bf1": 0.2284,
+      "mean_frag": 3.0
+    },
+    "spec": {
+      "rule": "weighted_avg",
+      "use": [
+        "clip_ms",
+        "clip_lc",
+        "texture"
+      ],
+      "weights": {
+        "clip_ms": 2,
+        "clip_lc": 2,
+        "texture": 1
+      }
+    },
+    "robust_score": 0.2573,
+    "rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.2125,
+        "coverage": 0.22420598093699162,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0111,
+        "area_ratio": 0.279,
+        "boundary_f1": 0.1368,
+        "fragments": 2,
+        "runtime_s": 5.73
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.2999,
+        "coverage": 0.350454542509282,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0292,
+        "area_ratio": 0.519,
+        "boundary_f1": 0.2459,
+        "fragments": 3,
+        "runtime_s": 5.45
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1874,
+        "coverage": 0.43746878325262223,
+        "fp_on_black": 0.2638287638287638,
+        "fp_area_frac": 0.1219,
+        "area_ratio": 1.772,
+        "boundary_f1": 0.1438,
+        "fragments": 3,
+        "runtime_s": 5.69
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.6092,
+        "coverage": 0.8505844689288512,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0802,
+        "area_ratio": 1.247,
+        "boundary_f1": 0.3872,
+        "fragments": 4,
+        "runtime_s": 5.74
+      }
+    ],
+    "_rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.2125,
+        "coverage": 0.22420598093699162,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0111,
+        "area_ratio": 0.279,
+        "boundary_f1": 0.1368,
+        "fragments": 2,
+        "runtime_s": 5.73,
+        "_pred": null
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.2999,
+        "coverage": 0.350454542509282,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0292,
+        "area_ratio": 0.519,
+        "boundary_f1": 0.2459,
+        "fragments": 3,
+        "runtime_s": 5.45,
+        "_pred": null
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.1874,
+        "coverage": 0.43746878325262223,
+        "fp_on_black": 0.2638287638287638,
+        "fp_area_frac": 0.1219,
+        "area_ratio": 1.772,
+        "boundary_f1": 0.1438,
+        "fragments": 3,
+        "runtime_s": 5.69,
+        "_pred": null
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.6092,
+        "coverage": 0.8505844689288512,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0802,
+        "area_ratio": 1.247,
+        "boundary_f1": 0.3872,
+        "fragments": 4,
+        "runtime_s": 5.74,
+        "_pred": null
+      }
+    ]
+  },
+  "FINAL": {
+    "fusion": "clip_ms+tex_2:1",
+    "spec": {
+      "rule": "weighted_avg",
+      "use": [
+        "clip_ms",
+        "texture"
+      ],
+      "weights": {
+        "clip_ms": 2,
+        "texture": 1
+      }
+    },
+    "method": "multi_thresh",
+    "summary": {
+      "mean_iou": 0.365,
+      "median_iou": 0.2544,
+      "min_iou": 0.2373,
+      "max_iou": 0.7142,
+      "mean_cov": 0.6934,
+      "mean_bf1": 0.27,
+      "mean_frag": 2.0
+    },
+    "rows": [
+      {
+        "target": "source1969",
+        "year": 1969,
+        "poly_iou": 0.7142,
+        "coverage": 0.8052401436822395,
+        "fp_on_black": null,
+        "fp_area_frac": 0.0258,
+        "area_ratio": 0.933,
+        "boundary_f1": 0.4686,
+        "fragments": 2,
+        "runtime_s": 6.16
+      },
+      {
+        "target": "source1980",
+        "year": 1980,
+        "poly_iou": 0.2478,
+        "coverage": 0.3015466756516837,
+        "fp_on_black": 0.0,
+        "fp_area_frac": 0.0376,
+        "area_ratio": 0.518,
+        "boundary_f1": 0.2777,
+        "fragments": 2,
+        "runtime_s": 5.45
+      },
+      {
+        "target": "דוגמאות_פוליגון_בתצא_1980",
+        "year": 1980,
+        "poly_iou": 0.2373,
+        "coverage": 0.6667354339942235,
+        "fp_on_black": 0.7397787397787398,
+        "fp_area_frac": 0.1633,
+        "area_ratio": 2.476,
+        "boundary_f1": 0.3336,
+        "fragments": 3,
+        "runtime_s": 5.51
+      },
+      {
+        "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+        "year": 1980,
+        "poly_iou": 0.2609,
+        "coverage": 1.0,
+        "fp_on_black": null,
+        "fp_area_frac": 0.5737,
+        "area_ratio": 3.833,
+        "boundary_f1": 0.0,
+        "fragments": 1,
+        "runtime_s": 5.65
+      }
+    ]
+  }
+}

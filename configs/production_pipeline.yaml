@@ -1,0 +1,58 @@
+# Production zero-shot cultivated-area pipeline (NO training).
+# Selected by bounded dev-set tuning on the 4 existing evaluation targets
+# (robustness score = 0.5*(mean_iou + min_iou); penalises per-target collapse).
+seed: 42
+device: cuda            # single RTX PRO 4500 Blackwell, one model at a time
+dtype: bfloat16
+
+priors:
+  clip:
+    checkpoint: openai/clip-vit-large-patch14
+    tile_sizes: [224, 336, 448]
+    overlap: 0.5
+    score: pos_minus_neg_margin      # ensemble mean(pos) - mean(neg)
+    positive_prompt_ensemble: historical_aerial   # see src/pipeline/priors.py CLIP_POS
+    negative_prompt_ensemble: terrain_artifacts    # CLIP_NEG
+    blend: cosine_window
+    variants: [clip_ms, clip_lc]     # clip_lc = local-contrast high-pass of clip_ms
+  dinov2:
+    checkpoint: facebook/dinov2-base
+    tile: 96
+    orientation: clip_agreement_prototype   # label-free; NOT brightness, NOT GT
+    note: "unstable across targets; EXCLUDED from the production fusion (hurts CLIP)"
+  texture:
+    signals: [structure_tensor_coherence, gabor_energy, fft_periodicity, entropy, variance]
+    role: robustness (rescues worst-case where CLIP fails)
+
+fusion:                 # WINNER
+  rule: weighted_avg
+  use: [clip_ms, texture]
+  weights: {clip_ms: 2, texture: 1}
+  smooth: 3
+  alternative: {rule: weighted_avg, use: [clip_lc], note: "higher mean 0.373 & boundary-F1, lower worst-case"}
+
+region_proposal:
+  method: multi_thresh          # percentiles 55/65/75/85 -> CC -> fill holes
+  min_area_frac: 0.004
+  topk: 6
+
+sam2:
+  checkpoint: facebook/sam2.1-hiera-large
+  prompts_per_region: [box, eroded_box, top_k_positive_points, positive+negative_points, box+neg]
+  selection: label_free_mask_score    # fill - 0.5*low_prior - 0.4*neg_cover + 0.15*compact - 0.03*frag
+  multimask: true
+
+postprocess:
+  drop_components_below: min_area
+  fill_holes: true
+
+results_on_eval_targets:      # evaluation only; GT never used for prompts
+  mean_iou: 0.365
+  median_iou: 0.254
+  min_iou: 0.237
+  max_iou: 0.714
+  mean_coverage: 0.693
+  mean_boundary_f1: 0.27
+  mean_fragments: 2.0
+  baseline_exp8_clip: 0.227
+  human_prompted_ceiling: 0.743

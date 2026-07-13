@@ -1,0 +1,26 @@
+{
+  "source1969": {
+    "clip_only": 0.1829,
+    "dino_only": 0.0,
+    "clipdino": 0.0218,
+    "fulltex": 0.0389
+  },
+  "source1980": {
+    "clip_only": 0.2484,
+    "dino_only": 0.0,
+    "clipdino": 0.161,
+    "fulltex": 0.1934
+  },
+  "דוגמאות_פוליגון_בתצא_1980": {
+    "clip_only": 0.1907,
+    "dino_only": 0.1418,
+    "clipdino": 0.22,
+    "fulltex": 0.231
+  },
+  "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני": {
+    "clip_only": 0.7772,
+    "dino_only": 0.7898,
+    "clipdino": 0.3202,
+    "fulltex": 0.267
+  }
+}

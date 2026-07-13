@@ -1,0 +1,54 @@
+{
+  "clip": {
+    "source1969": {
+      "poly_iou": 0.0839,
+      "coverage": 0.10856416023408413,
+      "boundary_f1": 0.1636,
+      "fragments": 2
+    },
+    "source1980": {
+      "poly_iou": 0.2994,
+      "coverage": 0.35195132539800816,
+      "boundary_f1": 0.1802,
+      "fragments": 3
+    },
+    "דוגמאות_פוליגון_בתצא_1980": {
+      "poly_iou": 0.1883,
+      "coverage": 0.3025581445851159,
+      "boundary_f1": 0.3483,
+      "fragments": 3
+    },
+    "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני": {
+      "poly_iou": 0.3356,
+      "coverage": 0.4557247387425253,
+      "boundary_f1": 0.1851,
+      "fragments": 3
+    }
+  },
+  "dinov2": {
+    "source1969": {
+      "poly_iou": 0.0023,
+      "coverage": 0.003974189603782031,
+      "boundary_f1": 0.108,
+      "fragments": 4
+    },
+    "source1980": {
+      "poly_iou": 0.3985,
+      "coverage": 0.4589097459356837,
+      "boundary_f1": 0.4253,
+      "fragments": 3
+    },
+    "דוגמאות_פוליגון_בתצא_1980": {
+      "poly_iou": 0.027,
+      "coverage": 0.09119633433950791,
+      "boundary_f1": 0.0607,
+      "fragments": 2
+    },
+    "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני": {
+      "poly_iou": 0.4113,
+      "coverage": 0.8324567891463178,
+      "boundary_f1": 0.3642,
+      "fragments": 2
+    }
+  }
+}
