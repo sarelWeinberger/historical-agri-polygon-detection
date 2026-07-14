@@ -1,0 +1,46 @@
+[
+  {
+    "target": "source1969",
+    "auc_vs_hardneg": null,
+    "auc_vs_background": 0.863,
+    "best_iou": 0.0,
+    "best_thr": 0.0,
+    "heat_range": [
+      0.0,
+      0.068
+    ]
+  },
+  {
+    "target": "source1980",
+    "auc_vs_hardneg": 0.7599890847036956,
+    "auc_vs_background": 0.611,
+    "best_iou": 0.0,
+    "best_thr": 0.0,
+    "heat_range": [
+      0.003,
+      0.042
+    ]
+  },
+  {
+    "target": "דוגמאות_פוליגון_בתצא_1980",
+    "auc_vs_hardneg": 0.7691592314715396,
+    "auc_vs_background": 0.712,
+    "best_iou": 0.0,
+    "best_thr": 0.0,
+    "heat_range": [
+      0.0,
+      0.028
+    ]
+  },
+  {
+    "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+    "auc_vs_hardneg": null,
+    "auc_vs_background": 0.85,
+    "best_iou": 0.0,
+    "best_thr": 0.0,
+    "heat_range": [
+      0.0,
+      0.076
+    ]
+  }
+]

@@ -48,3 +48,8 @@ outputs/zeroshot/exp8_auto/maps/
 # fused pipeline: keep maps + json results + reports + config; drop raw npy caches
 outputs/pipeline/priors/
 outputs/pipeline/rounds/*.npy
+
+# geoai trial: keep report + json + small overlays; drop rasters/npy caches
+outputs/geoai/*.tif
+outputs/geoai/*.npy
+.venv_geoai/

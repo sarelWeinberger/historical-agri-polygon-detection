@@ -1,0 +1,146 @@
+[
+  {
+    "iou": 0.0454,
+    "coverage": 0.0474,
+    "fp_on_black": null,
+    "pred_area_frac": 0.0186,
+    "target": "source1969",
+    "prompt": "cultivated field",
+    "runtime_s": 0.67
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": null,
+    "pred_area_frac": 0.0,
+    "target": "source1969",
+    "prompt": "plowed agricultural field",
+    "runtime_s": 0.36
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": null,
+    "pred_area_frac": 0.0,
+    "target": "source1969",
+    "prompt": "farmland with cultivation rows",
+    "runtime_s": 0.36
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": null,
+    "pred_area_frac": 0.0,
+    "target": "source1969",
+    "prompt": "agricultural field",
+    "runtime_s": 0.32
+  },
+  {
+    "iou": 0.0992,
+    "coverage": 0.2325,
+    "fp_on_black": 0.0,
+    "pred_area_frac": 0.2735,
+    "target": "source1980",
+    "prompt": "cultivated field",
+    "runtime_s": 0.16
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": 0.0,
+    "pred_area_frac": 0.0,
+    "target": "source1980",
+    "prompt": "plowed agricultural field",
+    "runtime_s": 0.16
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": 0.0,
+    "pred_area_frac": 0.0,
+    "target": "source1980",
+    "prompt": "farmland with cultivation rows",
+    "runtime_s": 0.16
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": 0.0,
+    "pred_area_frac": 0.0,
+    "target": "source1980",
+    "prompt": "agricultural field",
+    "runtime_s": 0.16
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": 0.0,
+    "pred_area_frac": 0.0,
+    "target": "דוגמאות_פוליגון_בתצא_1980",
+    "prompt": "cultivated field",
+    "runtime_s": 0.24
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": 0.0,
+    "pred_area_frac": 0.0,
+    "target": "דוגמאות_פוליגון_בתצא_1980",
+    "prompt": "plowed agricultural field",
+    "runtime_s": 0.24
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": 0.0,
+    "pred_area_frac": 0.0,
+    "target": "דוגמאות_פוליגון_בתצא_1980",
+    "prompt": "farmland with cultivation rows",
+    "runtime_s": 0.28
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": 0.0,
+    "pred_area_frac": 0.0,
+    "target": "דוגמאות_פוליגון_בתצא_1980",
+    "prompt": "agricultural field",
+    "runtime_s": 0.24
+  },
+  {
+    "iou": 0.3742,
+    "coverage": 0.4214,
+    "fp_on_black": null,
+    "pred_area_frac": 0.1109,
+    "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+    "prompt": "cultivated field",
+    "runtime_s": 0.33
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": null,
+    "pred_area_frac": 0.0,
+    "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+    "prompt": "plowed agricultural field",
+    "runtime_s": 0.33
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": null,
+    "pred_area_frac": 0.0,
+    "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+    "prompt": "farmland with cultivation rows",
+    "runtime_s": 0.32
+  },
+  {
+    "iou": 0.0,
+    "coverage": 0.0,
+    "fp_on_black": null,
+    "pred_area_frac": 0.0,
+    "target": "תצלום_מ1908_-_פוליגון_של_עיבוד_מסוג_שני",
+    "prompt": "agricultural field",
+    "runtime_s": 0.33
+  }
+]
