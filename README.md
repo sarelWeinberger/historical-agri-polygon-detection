@@ -192,6 +192,21 @@ python scripts/pipeline_optimize.py            # fusion x proposal sweep (dev-se
 python scripts/pipeline_render_maps.py         # 8-panel comparison + full-flow maps
 ```
 
+### External toolkit evaluation — `geoai` (opengeos/geoai-py)
+
+Report: [`outputs/reports/geoai_clipseg_eval.md`](outputs/reports/geoai_clipseg_eval.md)
+
+We evaluated whether [`geoai`](https://github.com/opengeos/geoai) offers a zero-shot capability
+that beats the fused pipeline. Its flagship zero-shot text segmenter, **`CLIPSegmentation`**
+(CLIPSeg), is **out of domain** on 1969/1980 grayscale scans: raw sigmoid probabilities max at
+0.03–0.08 (near-inactive), so default thresholding yields empty masks (mean IoU **0.130**). Its
+weak relative signal (AUROC ≈ 0.76 vs hard-negative) is **below our CLIP tile prior's 0.93**, so
+it would not improve the fusion. geoai's other zero-shot tools are GroundingDINO+SAM (already
+shown to fail) or natural-image detectors; its strong parts (`DINOv3Segmenter`,
+`train_segmentation_*`, torchgeo) require **training**. **Conclusion:** keep the fused pipeline
+zero-shot; geoai is a good fit *later* for the planned supervised localization head (it brings
+tiling, georeferencing, and QGIS export). Isolated in `.venv_geoai`.
+
 ---
 
 ## Conclusions
@@ -223,6 +238,7 @@ digitised. The evidence (AUROC ≈ 0.91–0.92 embedding separability, but autom
 | Zero-shot benchmark | [`zeroshot_evaluation.md`](outputs/reports/zeroshot_evaluation.md) | [`comparison_table.md`](outputs/zeroshot/comparison_table.md), `outputs/zeroshot/maps/` |
 | Experiment 8 | [`exp8_auto_pipeline.md`](outputs/reports/exp8_auto_pipeline.md) | `outputs/zeroshot/exp8_auto/maps_out/` |
 | **Optimized fused pipeline** | [`fused_pipeline_report.md`](outputs/reports/fused_pipeline_report.md) | [`outputs/pipeline/maps/`](outputs/pipeline/maps/), [`configs/production_pipeline.yaml`](configs/production_pipeline.yaml) |
+| External toolkit (`geoai`) | [`geoai_clipseg_eval.md`](outputs/reports/geoai_clipseg_eval.md) | `outputs/geoai/` (CLIPSeg overlays) |
 
 ---
 
